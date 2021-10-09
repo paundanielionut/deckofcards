@@ -25,9 +25,6 @@ class Deck:
             for value in VALUES:
                 self.cards.append(Card(suit, value))
 
-    def order(self):
-        return self.cards.sort(key=lambda c: c.value)
-
     def __str__(self):
         for card in self.cards:
             print(card)
