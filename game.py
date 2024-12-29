@@ -1,6 +1,6 @@
-import random
 
 from exceptions import EmptyDeckOfCards
+import secrets
 
 SUITS = ['Spade', 'Club', 'Diamond', 'Heart']
 VALUES = range(1, 14)
@@ -40,7 +40,7 @@ class Player:
         self.deck = deck
 
     def shuffle(self):
-        random.shuffle(self.deck.cards)
+        secrets.SystemRandom().shuffle(self.deck.cards)
 
     def order(self):
         self.deck.cards.order(key=lambda card: card.value)
